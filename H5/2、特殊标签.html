@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>特殊样式标签</title>
+    <style>
+
+
+    </style>
+</head>
+<body>
+<section>
+
+    <p>显示文字<mark>标记</mark></p>
+    <section>
+
+        <meter value="2" min="0" max="10" low="5" high="8"></meter><br/>
+        <meter value="6" min="0" max="10" low="5" high="8"></meter><br/>
+        <progress id="bar" max="200"></progress>
+        <script>
+            var bar = document.getElementById("bar")
+            var n=0;
+            function step() {
+                n++
+                bar.value = n;
+                if(n<100) requestAnimationFrame(step)
+            };requestAnimationFrame(step)
+        </script>
+
+        <br>
+        <ruby>
+            龍 <rt>龙</rt>
+                <rp>定义浏览器不支持ruby时显示内容</rp>
+        </ruby>
+
+    </section>
+
+    <section>
+
+
+    </section>
+
+</section>
+
+
+</body>
+</html>

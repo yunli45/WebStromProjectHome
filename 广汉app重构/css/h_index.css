@@ -1,0 +1,33 @@
+/*
+
+ 横屏首页css
+*/
+body{
+    /**
+        横屏的时候要保证背景图片大小充满整个背景
+    */
+    background: url(../img/index_bg.png);
+    height: 100%;
+    background-size: cover;
+}
+
+.top{
+    /**
+        父绝对子绝对，定义top，待会儿用于定位中心的图片
+    */
+    background: url(../img/header1.png) no-repeat;
+    height: 5rem;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding-top: 0.5rem;
+
+}
+
+
+.top>img{
+    width: 0.7rem;
+    position: absolute;
+    top: 0.04rem;
+    left: 3.5rem;
+}

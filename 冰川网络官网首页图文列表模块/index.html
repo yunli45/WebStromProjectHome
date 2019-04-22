@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>冰川网络官网</title>
+    <style>
+        /*
+            css样式组合方式
+            样式名称:样式值;
+        */
+        *{
+            /**
+              通配符选择器：  一次性选择到页面上所有的元素去设置样式
+              去除浏览器默认的样式边距
+               margin: 外边距
+               padding：内边距
+            */
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style-type: none;
+        }
+        a{
+            color: #ffffff;
+            text-decoration: none;  /* 清除下划线*/
+        }
+
+        .gamelists{
+            width: 730px;
+            height: 400px;
+            background-color: #cafab4;
+            /**
+               auto :自动两边相等
+             */
+            margin: 50px auto 0 auto;
+
+        }
+
+        .gamelists ul{
+            /* 后代选择器
+            list-style-type: none;   清除默认的小黑圆点
+            */
+
+            /*list-style-type: none;*/
+        }
+        .list{
+            overflow: hidden; /* 超出：影藏*/
+            /*
+                float：浮动 left 向左 所有list从左至右横排
+                    当元素超出父元素的宽度，换行接着排列
+            */
+            float: left;
+            position: relative;
+            width: 360px;
+            height: 125px;
+            margin: 0 10px 10px 0;
+            /*background-image: url("images/1.jpeg");*/
+            /* 4个值：左上 */
+            border-radius: 10px; /* 圆角*/
+
+        }
+        /*
+            二次筛选：
+                1、选择到以class命名为list的元素 6个人
+                2、在第一步的基础下根据括号内的数字选择到对应的第几个list
+        */
+        .list:nth-of-type(1){
+            background-image: url("images/1.jpeg");
+
+        }
+
+        .list:nth-of-type(2){
+            /*margin-right: 0px;*/
+            background-image: url("images/2.jpeg");
+        }
+        .list:nth-of-type(3){
+            background-image: url("images/3.jpeg");
+
+        }
+
+        .list:nth-of-type(4){
+            /*margin-right: 0px;*/
+            background-image: url("images/4.jpeg");
+        }
+        .list:nth-of-type(5){
+            background-image: url("images/5.jpeg");}
+
+        .list:nth-of-type(6){
+            /*margin-right: 0px;*/
+            background-image: url("images/6.jpeg");
+        }
+        /*
+            奇偶选择器
+        */
+
+        .list:nth-of-type(even){
+            margin-right: 0px;
+        }
+
+
+        .list-left{
+            float: left;
+            width: 240px;
+            height: 125px;
+            /*background-color: #1b2934;*/
+            border-radius: 10px 0px 0px 10px;
+            /*transform: translateX(-240px);*/
+            transition:1s; /* 过度时间*/
+        }
+
+
+
+        .list-right{
+            float: left;
+            width: 120px;
+            height: 125px;
+            background-color: #4e9ed5;
+            border-radius: 0px 10px 10px 0px;
+            /*
+                css3变换 ： translateX 横向移动
+            */
+            transform: translateX(120px);
+            transition:1s; /* 过度时间*/
+        }
+        .list-right a{
+            display: block;  /* 转化为块元素*/
+            width: 78px;
+            height: 28px;
+            background-color: #d4af46;
+            text-align: center; /* 文本对齐方式：水平居中*/
+            line-height: 28px; /* 行高 = 自身元素高度 ==》 单行文本垂直居中*/
+            font-size: 14px;
+        }
+
+        .list-right a:nth-of-type(1){
+            margin: 33px 20px 5px 20px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        .list-right a:nth-of-type(2){
+            margin: 0 20px 0 20px;
+            border-radius: 5px 5px 5px 5px;
+            background-color: #ff9999;
+        }
+
+        /*
+            鼠标悬停在list时，改变的是list的子元素的样式
+        */
+        .list:hover .list-left{
+            transform: translateX(0px);
+        }
+        .list:hover .list-right{
+            transform: translateX(0px);
+        }
+
+    </style>
+</head>
+<body>
+<!--
+tz07480
+    前端布局三步骤：
+        1、划分区域 《div》  (设置宽高)
+        2、排列位置
+        3、存放内容
+    w外边距（margin）：
+        1、元素与浏览器边缘之间的距离
+        2、元素之间的距离
+
+    user agent stylesheet:
+        浏览器自己设置的默认样式
+
+    外边距：四个方向，一个值
+        margin:
+
+
+    内边距：
+        元素边框与自身内容之间的距离
+
+    块元素：div ul li
+        在父元素内默认的排列方式：
+            从上至下
+            从左开始
+            每个块元素独占一行 （    display: block;）
+            宽度默认和父元素一样大小
+
+    行内元素： a
+        行内元素在父元素的默认方式
+            1、只占据内容所占的位置
+            2、其他的内容在它后边显示
+
+
+    颜色：
+        仓青：#7398ab
+        黛绿：#426666
+        青碧：#48c0a4
+        铜绿：#549688
+        翡翠：#3de1ae
+        孔雀绿：#7ab99a
+        青白：#c0ebd7
+        松绿：#68b4b0
+
+-->
+    <div class="gamelists">
+        <ul><!-- 无序列表标签 标签语义化 -->
+            <li class="list">
+                <div class="list-left">
+                </div>
+                <div class="list-right">
+                    <a href="http://lw2.q1.com/main.html">进入官网</a>
+                    <a href="http://lw.bbs.q1.com/forum.php?mod=forumdisplay&fid=5">游戏论坛</a>
+                </div>
+            </li>
+            <li class="list">
+                <div class="list-left">
+                </div>
+                <div class="list-right">
+                    <a href="http://lw2.q1.com/main.html">进入官网</a>
+                    <a href="http://lw.bbs.q1.com/forum.php?mod=forumdisplay&fid=5">游戏论坛</a>
+                </div>
+            </li>
+            <li class="list">
+                <div class="list-left">
+                </div>
+                <div class="list-right">
+                    <a href="http://lw2.q1.com/main.html">进入官网</a>
+                    <a href="http://lw.bbs.q1.com/forum.php?mod=forumdisplay&fid=5">游戏论坛</a>
+                </div>
+            <li class="list">
+                <div class="list-left">
+                </div>
+                <div class="list-right">
+                    <a href="http://lw2.q1.com/main.html">进入官网</a>
+                    <a href="http://lw.bbs.q1.com/forum.php?mod=forumdisplay&fid=5">游戏论坛</a>
+                </div>
+            </li>
+            <li class="list">
+                <div class="list-left">
+                </div>
+                <div class="list-right">
+                    <a href="http://lw2.q1.com/main.html">进入官网</a>
+                    <a href="http://lw.bbs.q1.com/forum.php?mod=forumdisplay&fid=5">游戏论坛</a>
+                </div>
+            </li>
+            <li class="list">
+                <div class="list-left">
+                </div>
+                <div class="list-right">
+                    <a href="http://lw2.q1.com/main.html">进入官网</a>
+                    <a href="http://lw.bbs.q1.com/forum.php?mod=forumdisplay&fid=5">游戏论坛</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="lb"></div>
+    <div class="web"></div>
+    <div class="moon"></div>
+</body>
+</html>

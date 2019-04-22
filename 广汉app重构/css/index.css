@@ -1,0 +1,16 @@
+
+/*
+
+ 竖屏首页css
+*/
+
+body{
+    /***/
+    background: url("../img/index_bg.png");
+
+}
+
+.top{
+    background: url("../img/header1.png") no-repeat;
+    background-size: cover;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3拉链式遮罩相册</title>
+    <style>
+        /** 了解下：
+            css reset：谁有清除谁的默认样式，浏览器内置的默认样式
+            文档流：auto
+
+
+        */
+        body{
+            margin: 0;
+            background-color: #242424;
+        }
+
+        .wrap{
+            width: 960px;
+            height: 400px;
+            /*background-color: #096;*/
+            margin: 50px auto;
+
+        }
+
+        .content{
+            float: left;  /** 浮动属性 横排显示 */
+            position: relative; /** 相对定位 参考物 */
+            /*width: 260px;*/
+            /*height: 160px;*/
+            /*background-color: red;*/
+            transition: .5s; /** css3:动画过渡效果，不加这个属性浏览器刷新太快，导致太突兀了， */
+            margin: 30px;
+
+        }
+
+        .content:hover{ /** 当鼠标放到content里执行的代码*/
+            transform: scale(1.3); /** css3 变换属性：比例*/
+        }
+
+        .content img{
+            width: 220px;
+            height: 100px;
+            padding: 10px; /** 内边距*/
+            border: 1px solid #fff; /** 边框 ： 粗细、样式、颜色*/
+        }
+        .hide{
+            position: absolute;  /** 绝对定位，漂浮 层级，没有参考物的情况下以浏览器为参考物，跟着浏览器对齐*/
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            transition: 0.5s;
+        }
+
+        .content:hover .hide{
+            /** 当鼠标放到content里让hide执行的代码*/
+            height: 0;
+        }
+
+        .content1:hover .hide{
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    JS课堂
+    CSs 课堂
+
+    <div class="wrap">
+        <div class="content">
+            <img src="images/1.jpg">
+            <div class="hide"></div>
+        </div>
+        <div class="content">
+            <img src="images/2.jpg">
+            <div class="hide"></div>
+        </div>
+        <div class="content">
+            <img src="images/3.jpg">
+            <div class="hide"></div>
+        </div>
+        <div class="content content1">
+            <img src="images/4.jpg">
+            <div class="hide"></div>
+        </div>
+        <div class="content content1">
+            <img src="images/5.jpg">
+            <div class="hide"></div>
+        </div>
+        <div class="content content1">
+            <img src="images/6.jpg">
+            <div class="hide"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+<!--
+
+CSS样式：网页装饰
+文档流
+
+文本流：
+    概括地说其实就是一系列字符，是文档的读取和输出顺序，也就是我们通常看到的由左到右、由上而下的读取和输出形式，
+    在网页中每个元素都是按照这个顺序进行排序和显示的，而position属性可以将元素从文本流脱离出来显示。
+
+文档流（块级元素自上而下，行内元素从左往右）：
+    英文原版文档为"normal flow"，翻译成常规流、普通流也就更好理解它了。
+    指的是元素按照其在 HTML 中的位置顺序决定排布的过程,主要的形式是自上而下（块级元素）,一行接一行,每一行从左至右（行内元素）。
+
+
+
+定位类型（三种，二三种脱离文档流）：
+    常规流 又包含三种类型：块级元素的块级格式、行内元素的行内格式 以及两种元素的相对定位
+    浮动（float ）：利用float脱离文档流的时候，其他盒子元素会无视这个元素，但是其他盒子内的文字依然会为它让出位子，环绕在其周围，也就是说不脱离文本流。
+    绝对定位：绝对定位可以使元素脱离文档流和文本流（元素和其中的文字都定位不到它的存在）。其他的元素按照常规流排列，
+
+
+
+计算机能识别的语言：二进制，其他的语言会转化为2进制，使用rgb更快被编译
+智能补全：单词的首字母 TAB   bcg#096 tab ==>background-color: #096;
+css3 rgba(红0-255，绿，蓝，透明度0-1)
+
+块级元素：display: block;
+
+
+父相对子绝对，多个相对的时候子对父绝对，谁动谁儿子
+
+block 块元素，独占一行，
+
+content 实现效果，content1实现控制
+
+可维护性： float 能创造一个BFC 由内容自动撑开， 块级格式化域。  内容有多少就创造多少 ,block 水平流：不给宽度会自动继承父级的宽度
+
+前端工程师：模块化、组件化、工程化 ==》降低维护成本
+大前端 --》用户体验 --》性能和效率  流畅、美观、0.3内打开一个网站
+
+ ccccssscccccdddcccsafwqqwX多所撒大所大所多

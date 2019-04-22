@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="广汉市app" content="这是用于重构广汉app为响应式布局的，以及重新编写相关的页面">
+    <title>响应式布局-首页</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css" media="screen and (orientation:portrait)" >
+    <link rel="stylesheet" href="css/h_index.css" media="screen and (orientation:landscape)">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <!--
+        meta 标签租用
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ X-UA-Compatible(浏览器采取何种版本渲染当前页面)
+ 说明：用于告知浏览器以何种版本来渲染页面。（一般都设置为最新模式，在各大框架中这个设置也很常见。）举例：
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/> //指定IE和Chrome使用最新版本渲染当前页面
+
+
+   针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓
+<meta name="HandheldFriendly" content="true">
+
+ 使用媒体查询，portrait：竖屏 、landscape：横屏
+    <link rel="stylesheet" href="css/index.css" media="screen and (orientation:portrait)" >
+    <link rel="stylesheet" href="css/h_index.css" media="screen and (orientation:landscape)">
+
+    -->
+
+    <!-- 网页头部 -->
+    <div class="top">
+        <img src="img/index_icon.png" alt="">
+        <!-- 头部显示的文字以及其英文翻译  广汉市公共法律服务网络平台系统-->
+        <span class="sysName_ch"></span>
+        <span class="sysName_en"></span>
+    </div>
+
+    <script src="js/mother.js"></script>
+</body>
+</html>

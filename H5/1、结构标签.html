@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            font: 12px/24px 'Microsoft YaHei';
+        }
+        h1{
+
+            margin: auto;
+            text-align: center;
+        }
+        header{
+            width: 700px;
+            border: 1px solid gold;
+            background-color: #fff;
+            text-align: center;
+            margin: auto;
+        }
+        article{
+            width: 700px;
+            height: 100px;
+            border: 1px solid purple;
+            margin: 0 auto;
+            margin-top: 15px;
+            position: relative;
+        }
+
+        article nav{
+            height: 35px;
+            background-color: #cc66cc;
+        }
+
+        article nav ul li {
+            list-style: none;
+            float: left;
+            width: 99px;
+            margin-right: 1px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        article .content{
+            height: 105px;
+            background: #ccccff;
+            text-align: center;
+        }
+
+        article .content .con_left{
+            width: 500px;
+            height: 100%;
+            background: #b9fff3;
+            float: left;
+        }
+        article .content .con_right{
+            width: 190px;
+            height: 100%;
+            background: #f9ff8b;
+            float: right;
+        }
+
+        article aside{
+            position: absolute;
+            top: 50%;
+            margin-top: -175px;
+            right: -50px;
+            height: 350px;
+            width: 50px;
+            border: 1px solid gold;
+            text-align: center;
+
+
+        }
+        article aside a{
+            color: #000;
+            text-decoration: none;
+            height: 50px;
+            background: #f363fa;
+            width: 100%;
+        }
+        article .person{
+            height: 60px;
+            background-color: #2bff9f;
+            margin-top: 15px;
+
+        }
+        .foot{
+            width: 700px;
+            height: 120px;
+            margin: 0 auto;
+            background: #1749fa;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>新增的标签，更具有语义化的标签</h1>
+
+    <header>
+        <h2>潭州教育前端第11期Html5Vip</h2>
+    </header>
+
+
+    <article>
+        <!-- nav 导航条 -->
+        <nav>
+            <ul>
+                <li>首页</li>
+                <li>第一页</li>
+                <li>第二页</li>
+                <li>第三页</li>
+            </ul>
+        </nav>
+
+
+        <!--  定义一块区域-->
+        <section class="content">
+            <section class="con_left">
+                section
+            </section>
+
+            <section class="con_right">
+                section
+            </section>
+
+        </section>
+
+        <!--  侧边栏 bibi首页的侧边栏 -->
+        <aside>
+            <a>sdfsdf</a>
+            <a>sdfsdf</a>
+            <a>sdfsdf</a>
+            <a>sdfsdf</a>
+
+        </aside>
+
+        <!-- 定义一块区域，用于放图片以及其描述-->
+        <section class="person">
+            <figure>
+                <img src="http://dcs.conac.cn/image/red.png" width="30" height="30">
+                <figcaption>
+                    定义一个标题，figcaption元素放在figure里的第一个位置或者最后一个位置
+                </figcaption>
+
+            </figure>
+
+        </section>
+        <iframe width="100%" height="100px" src="http://www.baidu.com" frameborder="0"></iframe>
+    </article>
+
+    <!--  网站、文章的底部 -->
+    <footer class="foot">
+
+    </footer>
+</body>
+</html>
