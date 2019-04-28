@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">  <!-- 元信息标签 编码格式 -->
+    <!-- 网站三要素 关键字 网站描述 标题 SEO优化-->
+    <meta name="keyword" content="前端 游戏官网">
+    <meta name="description" content="前端 游戏官网">
+    <title>九州海上牧云</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .wrap{
+            width: 1165px;
+            height: 520px;
+            background: #ff8b69;
+            margin: 50px auto;
+        }
+
+        .item{
+            width: 119px;
+            height: 520px;
+            float: left;
+            transition: 2s; <!-- 过渡 -->
+        }
+        .item img{
+            opacity: 1;
+            transition: 2s;
+        }
+        .item:nth-child(1){
+             /* 找到item元素的第一个元素*/
+            background: url("images/feature-1.png");
+        }
+        .item:nth-child(2){
+            /* 找到item元素的第一个元素*/
+            background: url("images/feature-2.png");
+        }
+
+        .item:nth-child(3){
+            /* 找到item元素的第一个元素*/
+            background: url("images/feature-3.png");
+        }
+        .item:nth-child(4){
+            /* 找到item元素的第一个元素*/
+            background: url("images/feature-4.png");
+        }
+        .item:nth-child(5){
+            /* 找到item元素的第一个元素*/
+            background: url("images/feature-5.png");
+        }
+        .show{
+            width: 689px;
+
+        }
+
+        .show img{
+            opacity: 0;  /* 透明度 */
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+  <!--
+    y一个div中嵌套5个，一个图片 4个短的
+
+    内容溢出，背景图片不是内容
+    -->
+    <div class="wrap">
+        <div class="item show"><img src="images/01.png" alt=""></div>
+        <div class="item"><img src="images/02.png" alt=""></div>
+        <div class="item"><img src="images/03.png" alt=""></div>
+        <div class="item"><img src="images/04.png" alt=""></div>
+        <div class="item"><img src="images/05.png" alt=""></div>
+
+
+    </div>
+
+  <script>
+
+
+      // <!-- 获取所有的item元素。存入一个集合中-->
+      var oItem = document.querySelectorAll(".item")
+  
+      for (var i=0; i<oItem.length; i++){
+          // 给每一个item绑定一个时间，鼠标移入事件
+          oItem[i].onmouseover = function () {
+
+              // 给所有的item元素全部清除show名字
+              for (var j=0; j<oItem.length; j++){
+                  oItem[j].classList.remove("show")
+              }
+              this.classList.add("show") //给鼠标划入的某一个元素加show的类名
+          }
+      } 
+  
+  
+  
+  </script>
+
+</body>
+</html>
