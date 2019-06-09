@@ -2,8 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="css/ce.css" media="screen" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>等待ui</title>
+    <script>
+        (function (win,doc){
+            if (!win.addEventListener) return;
+            var html=document.documentElement;
+            function setFont()
+            {
+                var cliWidth=html.clientWidth;
+                html.style.fontSize=100*(cliWidth/750)+'px';
+            }
+            win.addEventListener('resize',setFont,false);
+            setFont();
+        })(window,document);
+
+    </script>
+    <link rel="stylesheet" href="css/pc.css" media="screen and (orientation:landscape)"/>
+    <link rel="stylesheet" href="css/an.css"media="screen and (orientation:portrait)"/>
 </head>
 <body>
 
@@ -12,18 +29,18 @@
     <!-- 上部分：头像、名字、对方的状态、进度条-->
     <div id="info">
         <div id="icon">
-            <img src="img/hade.png" style="height: 120px; width: 120px; margin-top: 20px;border-radius:50%;">
-            <p style="font-size: 0.8em" id="name">YUNLI44</p>
-            <p style="font-size: 0.5em" id="status">正在等待对方接听中</p>
+            <img src="img/hade.png">
+            <p id="name">YUNLI44</p>
+            <p id="status">正在等待对方接听中</p>
         </div>
         <div id="rond">
             <div id="test"></div>
         </div>
     </div>
 
-    <!--  下部分：挂断电话  -->
-    <div id="call_off">
-        <img src="img/off.png" style="height: 70px; width: 70px;border-radius:50%;">
+    <!--  下部分：挂断 电话  -->
+    <div id="call_off" align="center">
+        <img src="img/off.png">
     </div>
 
 </div>

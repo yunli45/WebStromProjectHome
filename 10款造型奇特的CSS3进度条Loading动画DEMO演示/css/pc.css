@@ -8,12 +8,29 @@ html,body {
 
 #caseBlanche {
     background-color : #c2c2c2;
-    height : 82%;
+    height : 90%;
     width : 25%;
     margin: 1% auto auto auto;
     text-align: center;
 
 }
+
+#icon img{
+    height: 80px;
+    width: 80px;
+    margin: 5px auto 0 auto;
+    border-radius:50%;
+}
+
+#icon p{
+    margin: 0 auto 0 auto;
+}
+
+#name,#status{
+    font-size: 0.08em
+}
+
+
 
 #test {
     height : 5px;
@@ -24,6 +41,7 @@ html,body {
     top : 0px;
     left : 1px;
 }
+
 #rond{
 
     height: 20px;
@@ -37,15 +55,14 @@ html,body {
 }
 
 #call_off{
-    position : relative;
-    margin: 65% auto auto auto;
-}
+    margin: 40% auto auto auto;
 
+}
 #call_off img{
-    position: absolute;
-    margin-bottom: 2%;
+    height: 60px;
+    width: 60px;
+    border-radius:50%;
 }
-
 
 @keyframes rond {
     0% {transform : rotate(0deg);}
@@ -56,3 +73,4 @@ html,body {
     0% {-webkit-transform : rotate(0deg);}
     100% {-webkit-transform : rotate(360deg);}
 }
+
